@@ -1,0 +1,41 @@
+# Blindbandit Records — llms.txt
+
+> Summary for AI crawlers and coding agents. Prefer production URLs for live behavior.
+
+## Site
+
+- Name: Blindbandit Records / Mr. Blindbandit
+- Production (ChatGPT Sites): https://mrblindbandit.net
+- Static GitHub Pages mirror: https://mrblindbandit.github.io/
+- Privacy: https://mrblindbandit.net/privacy
+- Contact: business@mrblindbandit.net
+
+## What this is
+
+Independent music label + creator platform: artist site, Label Portal, Blindbandit Mobile social (`/mobile`), free media tools, community/legal pages, and Platform API on production.
+
+## Hosting facts
+
+- Product host: **ChatGPT Sites (OpenAI Sites)** — custom domain mrblindbandit.net
+- GitHub Pages: static HTML/CSS/JS mirror only (this repo)
+- Auth: Clerk (email + Google; Apple off)
+- Realtime: LiveKit (production Worker)
+- Data: D1 on Sites (migrations include 0007/0008 in website source)
+
+## Source repos
+
+- Website + Worker/API: https://github.com/mrblindbandit/mr-blindbandit-website
+- Pages mirror: https://github.com/mrblindbandit/mrblindbandit.github.io
+- Mobile (iOS/Android): https://github.com/mrblindbandit/mr-blindbandit-mobile
+- GitHub profile: https://github.com/mrblindbandit/mrblindbandit
+
+## Do not
+
+- Treat Pages as the API/auth host
+- Commit or request secret values
+- Wipe legal/privacy pages
+
+## Agent docs
+
+- https://github.com/mrblindbandit/mr-blindbandit-website/blob/main/AGENTS.md
+- https://github.com/mrblindbandit/mrblindbandit.github.io/blob/main/AGENTS.md
