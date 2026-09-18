@@ -1,57 +1,28 @@
-# AGENTS.md
+# AGENTS.md — GitHub Pages static mirror
 
-## For other AIs
+> **Other AIs:** read [`AI_CHANGELOG.md`](./AI_CHANGELOG.md) first.
 
-**Work history:** read [`AI_CHANGELOG.md`](./AI_CHANGELOG.md) first (full 2026-09-18 Blindbandit day log and ongoing AI-assisted changes).
+## Mission
 
-# AGENTS.md — mrblindbandit.github.io
+You may maintain this **static** public mirror of Blindbandit frontend assets. Keep it professional and in sync with `mr-blindbandit-website` `public/` when possible.
 
-Instructions for coding agents working in this **GitHub Pages** static site repository.
+**This is NOT production.** Production is **ChatGPT Sites** → https://mrblindbandit.net  
+Live Pages URL: https://mrblindbandit.github.io/
 
-## What this repo is
+## Broad access (you MAY)
 
-Public **static** deploy of Blindbandit Records HTML/CSS/JS assets, typically synced from `public/` in `mrblindbandit/mr-blindbandit-website`.
+- Update static HTML/CSS/JS/assets
+- Improve README, `llms.txt`, `robots.txt`, governance, AGENTS/AI_CHANGELOG
+- Fix broken links that are static-safe
 
-Live Pages URL: **https://mrblindbandit.github.io/**
+## Hard rails (you MUST NOT)
 
-## Production host (critical)
+1. Never claim Pages runs Clerk/LiveKit/D1 — those need ChatGPT Sites
+2. Never commit secrets
+3. Prefer syncing from website `public/` over one-off divergent edits
+4. Never force-push destructively without need
 
-**Real production** (Clerk, LiveKit, D1, Worker/API, secrets) runs on **ChatGPT Sites (OpenAI Sites)** → **https://mrblindbandit.net**.
+## Sync
 
-This Pages repo is a **static mirror only**. Do **not** describe Pages as the product host, and do **not** describe production as “hosted on Cloudflare” as the product host.
-
-Auth callbacks, `/api/`, and dynamic Worker routes do **not** run on GitHub Pages.
-
-## Related repos
-
-| Repo | Role |
-|---|---|
-| `mrblindbandit/mrblindbandit.github.io` | This static Pages site |
-| `mrblindbandit/mr-blindbandit-website` | Canonical source + Worker/API + D1 |
-| `mrblindbandit/mr-blindbandit-mobile` | iOS + Android apps |
-| `mrblindbandit/mrblindbandit` | GitHub profile README |
-
-## Auth & integrations (on production only)
-
-- **Clerk**: email + Google; Apple off — configured on ChatGPT Sites, not Pages
-- **LiveKit**, push, D1 migrations **0007/0008** — website/Worker on Sites
-- Prefer editing product logic in `mr-blindbandit-website`, then re-sync static assets here
-
-## Hard rules
-
-1. Never commit secrets
-2. Do not wipe legal / privacy / trust-safety pages
-3. Keep `robots.txt` and `llms.txt` accurate (production sitemap on mrblindbandit.net)
-4. Prefer updating `AI_CHANGELOG.md` for substantial AI-assisted changes
-5. Additive content only when mirroring — avoid destructive mass deletes of legal pages
-
-## Read next
-
-- `README.md` — mirror vs production clarification
-- `llms.txt` — short site summary for AI crawlers
-- `robots.txt` — crawl rules
-- Website repo `AGENTS.md` / `docs/ARCHITECTURE.md` for full architecture
-
-## Contact
-
-business@mrblindbandit.net
+Preferred source of truth: `mrblindbandit/mr-blindbandit-website` → `public/`  
+Website workflow `deploy-github-pages.yml` can publish here when `PAGES_DEPLOY_TOKEN` is set.
