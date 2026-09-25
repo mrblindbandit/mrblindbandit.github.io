@@ -19,13 +19,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Pages repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: pages
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout website source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: mrblindbandit/mr-blindbandit-website
           ref: main
